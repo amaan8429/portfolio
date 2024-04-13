@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -27,13 +28,15 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <div className="w-screen h-screen flex flex-col justify-center items-center">
-          <div className="min-h-screen flex flex-col md:w-[45rem] md:p-10 p-2">
-            <Nav />
-            {children}
-            <Footer />
+        <ThemeProvider attribute="class" defaultTheme="system">
+          <div className="w-screen h-screen flex flex-col justify-center items-center">
+            <div className="min-h-screen flex flex-col md:w-[45rem] md:p-10 p-2">
+              <Nav />
+              {children}
+              <Footer />
+            </div>
           </div>
-        </div>
+        </ThemeProvider>
       </body>
     </html>
   );

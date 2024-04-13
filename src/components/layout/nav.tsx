@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { ModeToggle } from "../mode-toggle";
 
 export default function Nav() {
   return (
@@ -8,12 +9,13 @@ export default function Nav() {
         Mohd Amaan
       </a>
       <div className="w-1/2 flex justify-end py-4 items-center flex-row h-full gap-7">
-        <Link
+        {/* <Link
           href="/"
           className="font-semibold text-black/60 dark:text-white/60"
         >
           About
-        </Link>
+        </Link> */}
+        <ModeToggle />
       </div>
     </div>
   );

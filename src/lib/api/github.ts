@@ -1,6 +1,7 @@
 import { createContext, useContext } from "react";
 import axios, { AxiosError } from "axios";
 import dotenv from "dotenv";
+import { RemoveTheseRepos } from "../filter";
 
 dotenv.config();
 
@@ -35,6 +36,10 @@ export async function fetchGithubData() {
 
 export async function fetchGithubRepos() {
   try {
+    console.log(
+      NEXT_PUBLIC_GITHUB_ACCESS_TOKEN,
+      "NEXT_PUBLIC_GITHUB_ACCESS_TOKEN"
+    );
     const response = await axios.get(
       "https://api.github.com/users/amaan8429/repos",
       {
@@ -43,7 +48,10 @@ export async function fetchGithubRepos() {
         },
       }
     );
-    return response.data;
+    const filteredData = response.data.filter(
+      (repo: any) => !RemoveTheseRepos.includes(repo.name)
+    );
+    return filteredData;
   } catch (error) {
     if (axios.isAxiosError(error)) {
       console.error("Error fetching GitHub repositories:", error.message);
@@ -64,6 +72,6 @@ export async function LastUpdated() {
     }
   );
   const updatedAt = response.data.updated_at;
-  const formattedDate = new Date(updatedAt).toLocaleString();
+  const formattedDate = new Date(updatedAt).toLocaleString().split(",")[0];
   return formattedDate;
 }

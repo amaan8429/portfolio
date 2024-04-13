@@ -10,32 +10,53 @@ export default function Home() {
       <div className="w-full flex flex-col gap-2">
         <div className="font-semibold text-xl">Hey, I am Amaan</div>
         <div className="">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. In
-          laboriosam, natus omnis commodi doloribus voluptatum suscipit vero
-          dicta temporibus aliquam nihil nobis dolorem non facilis quasi? Odit
-          molestias sapiente molestiae? Sit saepe adipisci obcaecati tempore
-          architecto quidem in omnis deleniti, ipsa dicta repellendus,
-          dignissimos quisquam error illo dolore itaque necessitatibus harum
-          voluptatem similique ducimus provident vel ipsum rem commodi?
-          Suscipit!
+          I love building things and learning about new technologies. I am
+          currently building web applications using Next.js, TypeScript,
+          Tailwind, and MongoDB. I write about the things I learn on my blog. I
+          spend my free time on Twitter. I am currently learning AI to make my
+          web apps more interesting.
         </div>
         <div className="w-full mt-4 flex flex-row gap-5">
-          <Link className="w-8 h-8" href={"https://github.com/amaan8429"}>
+          <Link
+            className="w-8 h-8"
+            href={"https://github.com/amaan8429"}
+            target="_blank"
+          >
             <FiGithub size={"26"} />
           </Link>
-          <Link className="w-8 h-8" href={"https://x.com/amaan8429"}>
+          <Link
+            className="w-8 h-8"
+            href={"https://x.com/amaan8429"}
+            target="_blank"
+          >
             <FiTwitter size={"26"} />
           </Link>
-          <Link className="w-8 h-8" href={"https://huggingface.com/amaan8429"}>
+          <Link
+            className="w-8 h-8"
+            href={"https://huggingface.com/amaan8429"}
+            target="_blank"
+          >
             <GiArtificialHive size={"26"} />
           </Link>
-          <Link className="w-8 h-8" href={"https://instagram.com/amaan.8429"}>
+          <Link
+            className="w-8 h-8"
+            href={"https://instagram.com/amaan.8429"}
+            target="_blank"
+          >
             <FiInstagram size={"26"} />
           </Link>
-          <Link className="w-8 h-8" href={"https://amaan849.hashnode.dev"}>
+          <Link
+            className="w-8 h-8"
+            href={"https://amaan849.hashnode.dev"}
+            target="_blank"
+          >
             <FaHashnode size={"26"} />
           </Link>
-          <Link className="w-8 h-8" href={"https://linkedin.com/amaan8429"}>
+          <Link
+            className="w-8 h-8"
+            href={"https://linkedin.com/amaan8429"}
+            target="_blank"
+          >
             <FiLinkedin size={"26"} />
           </Link>
         </div>
